@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS import -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">
+    <!-- Bootstrap JS import -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>
+
+    <!-- Calculo -->
+    <script src="js/calculo.js"></script> 
+    <title>Calcular planos</title>
+</head>
+<body class="">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Calcular planos de internet</a>
+    </nav>
+</header>        
+<section class="container mt-2" >
+    <div class="col-sm-12" style="text-align: center">
+    <h5 >Calculos</h5>
+     <i>O número de dias do mês usado é sempre do <b>mês atual</b></i>
+</div>
+<hr>
+<div class="col-sm-12 mb-5">
+<!-- Calculo plano -->
+<form name="plano">
+<p>
+    <b>Calcular novo plano</b><br>
+    Total = [(Preço do plano atual / Dias do mês) x Dia atual] + [(Preço do novo plano / Dias do mês) x Dias restantes do mês]
+</p>
+<div class="form-group">
+    <label for="plano_antigo">Preço do plano antigo (R$): </label>
+    <input type="number" name="plano_antigo" class="form-control" placeholder="Ex: 89,90" required/>
+</div>
+<div class="form-group">
+    <label for="plano_novo">Preço do novo plano (R$): </label>
+    <input type="number" name="plano_novo" class="form-control" placeholder="Ex: 124,90" required/>
+</div>
+    <button type="button" class="btn btn-primary btn-block" onclick="calcularPlano()">Calcular</button>
+    <button type="button" class="btn btn-warning btn-block" onclick="limparTotal()">Limpar</button>
+<div class="form-group mt-2">
+    <label for="total">Resultado:</label>
+    <input type="text" name="total" class="form-control" disabled>    
+</div>
+</form>  
+</div>
+<hr>        
+</section>
+
+<footer class="page-footer font-small bg-dark">
+<!-- Copyright -->
+<div class="footer-copyright text-center text-light py-3">
+    <a href="https://github.com/LimaJonas" style="color: white" target="no_blank"> <u>Jonas Lima</u></a> © Copyright
+</div>
+<!-- Copyright -->  
+</footer>
+
+</body>
+</html>
